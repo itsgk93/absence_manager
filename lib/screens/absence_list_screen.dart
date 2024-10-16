@@ -1,5 +1,3 @@
-import 'package:absence_manager/models/absence.dart';
-import 'package:absence_manager/utility/utility.dart';
 import 'package:absence_manager/widgets/absence_list.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -13,21 +11,6 @@ class AbsenceListScreen extends StatelessWidget {
       appBar: AppBar(
         title: Text('Absence Manager'),
         backgroundColor: Colors.blueAccent,
-        actions: [
-          Consumer<AbsenceProvider>(
-            builder: (context, provider, child) {
-              return IconButton(
-                icon: Icon(Icons.share),
-                tooltip: 'Export to iCal',
-                onPressed: () {
-                  final List<Absence> absences =
-                      provider.paginatedAbsences; 
-                  exportToICal(absences); 
-                },
-              );
-            },
-          ),
-        ],
       ),
       body: Consumer<AbsenceProvider>(
         builder: (context, provider, child) {

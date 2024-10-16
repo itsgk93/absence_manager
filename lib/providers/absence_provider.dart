@@ -7,10 +7,13 @@ class AbsenceProvider with ChangeNotifier {
   List<Absence> _absences = [];
   List<Member> _members = [];
   List<Absence> _filteredAbsences = [];
+  String? _selectedAbsenceType; 
   bool _isLoading = true;
   bool _hasError = false;
   int page = 1;
   final int _pageSize = 10;
+
+  String? get selectedAbsenceType => _selectedAbsenceType;
 
   List<Absence> get paginatedAbsences {
     if (_filteredAbsences.isEmpty) {
@@ -95,6 +98,8 @@ class AbsenceProvider with ChangeNotifier {
   }
 
   void filterByType(String type) {
+    _selectedAbsenceType = type;
+
     if (type.isEmpty) {
       _filteredAbsences = List.from(_absences);
     } else {
@@ -122,6 +127,7 @@ class AbsenceProvider with ChangeNotifier {
 
   void resetFilters() {
     _filteredAbsences = List.from(_absences);
+    _selectedAbsenceType = null;
     reset();
   }
 }
