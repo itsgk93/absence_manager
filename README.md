@@ -1,7 +1,3 @@
-<p align="center">
-  <img src="https://crewmeister.com/images/logo_crewmeister_without_text.svg" />
-</p>
-
 # 🚀 Crewmeister coding challenge - Frontend (Flutter)
 
 Hello and thanks in participating in the crewmeister coding challenge. This coding exercise will help us get a better feeling about your coding process.
