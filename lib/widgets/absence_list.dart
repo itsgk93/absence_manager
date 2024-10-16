@@ -118,8 +118,8 @@ class AbsenceList extends StatelessWidget {
                               },
                               child: Text('Add to Calendar'),
                               style: ElevatedButton.styleFrom(
-                                backgroundColor: Colors.blue,
-                                foregroundColor: Colors.white,
+                                backgroundColor: Colors.greenAccent,
+                                foregroundColor: Colors.black,
                                 padding: EdgeInsets.symmetric(
                                     horizontal: 12,
                                     vertical: 4), 
