@@ -7,6 +7,9 @@ dev_dependencies:
   test: ^1.25.4
   flutter_test:
     sdk: flutter
+  mockito: ^5.0.0
+  build_runner: ^2.1.10
+  
 dependencies:
   flutter:
     sdk: flutter

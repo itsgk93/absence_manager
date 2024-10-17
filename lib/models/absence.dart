@@ -1,8 +1,8 @@
 class Absence {
   final String admitterNote;
-  final DateTime? confirmedAt; 
+  final DateTime? confirmedAt;
   final DateTime createdAt;
-  final DateTime? rejectedAt; 
+  final DateTime? rejectedAt;
   final int crewId;
   final DateTime startDate;
   final DateTime endDate;
@@ -14,9 +14,9 @@ class Absence {
 
   Absence({
     required this.admitterNote,
-    required this.confirmedAt,
+    this.confirmedAt,
     required this.createdAt,
-    required this.rejectedAt,
+    this.rejectedAt,
     required this.crewId,
     required this.startDate,
     required this.endDate,
@@ -37,7 +37,7 @@ class Absence {
       createdAt: DateTime.parse(json['createdAt']),
       rejectedAt: json['rejectedAt'] != null
           ? DateTime.parse(json['rejectedAt'])
-          : null,  
+          : null,
       crewId: json['crewId'],
       startDate: DateTime.parse(json['startDate']),
       endDate: DateTime.parse(json['endDate']),

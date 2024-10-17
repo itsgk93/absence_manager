@@ -110,27 +110,28 @@ class AbsenceList extends StatelessWidget {
                                 ),
                               ],
                             ),
-                            ElevatedButton(
-                              onPressed: () {
-                                final List<Absence> absences =
-                                    provider.paginatedAbsences;
-                                exportToICal(absences);
-                              },
-                              child: Text('Add to Calendar'),
-                              style: ElevatedButton.styleFrom(
-                                backgroundColor: Colors.greenAccent,
-                                foregroundColor: Colors.black,
-                                padding: EdgeInsets.symmetric(
-                                    horizontal: 12,
-                                    vertical: 4), 
-                                minimumSize: Size(100,
-                                    20), 
-                                shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(
-                                      4), 
-                                ),
-                              ),
-                            ),
+                            status == 'Confirmed'
+                                ? ElevatedButton(
+                                    onPressed: () {
+                                      final List<Absence> absences =
+                                          provider.paginatedAbsences;
+                                      exportToICal(absences);
+                                    },
+                                    child: Text('Add to Calendar'),
+                                    style: ElevatedButton.styleFrom(
+                                      backgroundColor: Colors.greenAccent,
+                                      foregroundColor: Colors.black,
+                                      padding: EdgeInsets.symmetric(
+                                        horizontal: 12,
+                                        vertical: 4,
+                                      ),
+                                      minimumSize: Size(100, 20),
+                                      shape: RoundedRectangleBorder(
+                                        borderRadius: BorderRadius.circular(4),
+                                      ),
+                                    ),
+                                  )
+                                : SizedBox.shrink(),
                           ],
                         ),
                       ),

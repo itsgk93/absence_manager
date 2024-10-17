@@ -1,9 +1,8 @@
 class Member {
   final int userId;
   final String name;
-  final String image; // Optional field for image URL
-  final int crewId;   // Optional field for crew ID
-
+  final String image;
+  final int crewId; 
   Member({
     required this.userId,
     required this.name,
@@ -15,7 +14,7 @@ class Member {
     return Member(
       userId: json['userId'],
       name: json['name'],
-      image: json['image'] ?? '', // Default to empty string if not provided
+      image: json['image'] ?? '',
       crewId: json['crewId'],
     );
   }

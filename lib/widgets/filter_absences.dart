@@ -23,8 +23,8 @@ class FilterAbsences extends StatelessWidget {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            SizedBox(
-              width: 180,
+            Expanded(
+              flex: 3,
               child: DropdownButtonFormField<String>(
                 decoration: InputDecoration(
                   border: OutlineInputBorder(
